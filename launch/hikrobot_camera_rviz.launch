@@ -1,0 +1,7 @@
+<launch>
+    <rosparam file="$(find hikrobot_camera)/config/camera.yaml" command="load" />
+    <node pkg="hikrobot_camera" type="hikrobot_camera" name="hikrobot_camera" respawn="true" output="screen" />
+
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find hikrobot_camera)/rviz_config/hikrobot.rviz" />
+
+</launch>
